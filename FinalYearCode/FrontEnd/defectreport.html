@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Defect Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-light">
+    <!-- Navbar - start -->
+    <nav class="navbar bg-dark py-3 ">
+        <div class="container-fluid  text-white fs-4">
+            <span ><i class="bi bi-card-text px-3 pe-2"></i>  Reports</span>
+        </div>
+    </nav>
+    <!-- Navbar - end -->
+    <div class="container-fluid mt-5">
+        <div class="row my-3">
+            <div class="col-12 offset-lg-1 col-lg-10 bg-white rounded-3 border">
+
+
+                <div class="row pb-4 pt-3">
+                    <div class="col-12 offset-md-2 col-md-8 offset-lg-3 col-lg-6 text-center fs-5">
+                        Upload the defect summary as a csv file that you wish to predict priority level
+                    </div>
+                </div>
+
+                <div class=" py-4  d-flex justify-content-center">
+                    <div class=" text-center">
+                        <button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" id="upload_defect1"class="btn btn-outline-primary rounded-pill sub-text hover-white"><strong>Upload Defects</strong></button>
+                    </div>
+                    <!-- <div class="col-12 col-md-4 col-lg-3 text-center">
+                        <button class="btn btn-large btn-outline-success rounded-pill sub-text"><strong>Prioritize</strong></button>
+                    </div> -->
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Footer - start -->
+        <div class="row mb-5 " style="min-height: 50vh;" >
+            <div class="col-12 offset-lg-1 col-lg-10 bg-white rounded-3 border">
+                <div class="row gy-4 mt-2 mb-3">
+                    <div class="col-12">
+                        <div class="row gy-3">
+                            <div class="col-12 col-md-8 main-text px-3">
+                                <h3 class="fw-bolder">Prioritized Defect Reports</h3>
+                            </div>
+                            <div class="col-12 col-md-2 sub-text pe-1">
+                                <button id="btnSave" class="btn btn-outline-success  rounded-pill">Save</button>
+                            </div>
+                            <div class="col-12 col-md-2 sub-text pe-1">
+                                <button id="btnDownload" class="btn btn-outline-primary rounded-pill">Download Results</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12" id="printDiv">
+                        <table class="table table-hover main-text">
+                            <thead class="table-secondary">
+                                <tr class="text-center fw-bold">
+                                    <td>Defect Report</td>
+                                    <td>Priority level</td>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center" id="table-data">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- priority level legend -->
+            <div  class="row my-3"  id="plegend">
+                <div class="col-12 offset-lg-1 col-lg-10 bg-white rounded-3 border" id="plegendhedding">
+                    <div class="col-12 col-md-8 main-text px-3">
+                        <h3 class="fw-bolder">Priority Level Legend</h3>
+                    </div>
+                </div>
+                <div class="col-12 offset-lg-1 col-lg-10 bg-white rounded-3 border" id="plgendtable">
+                    <table class="table table-hover main-text">
+                        <thead class="table-secondary">
+                            <tr class="text-center fw-bold">
+                        
+                                <td>Priority level indicator</td>
+                                <td>Description</td>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                                <td>P1</td>
+                                <td>Must fix for next release or milestone</td>
+                            </tr>
+                            <tr>
+                                <td>P2</td>
+                                <td>Very important for next release or milestone </td>
+                            </tr>
+                            <tr>
+                                <td>P3</td>
+                                <td>Of normal importance. Default starting point</td>
+                            </tr>
+                            <tr>
+                                <td>P4</td>
+                                <td>Important, but less so</td>
+                            </tr>
+                            <tr>
+                                <td>P5</td>
+                                <td>A valid bug, but no plans to investigate further or fix</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+    
+                    
+            
+            </div>
+        </div>
+
+        <div class="row footer footer-dark ">
+            <footer>
+                <div class="container">
+                    <p class="copyright">Copyright &copy; 2022 All Rights Reserved By Sanuri Perera</p>
+                </div>
+            </footer>
+        </div>
+        <!-- Footer - end -->
+
+        <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Upload Defect Reports</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <input class="form-control" type="file" id="fileUploadInput">
+                <textarea class="form-control d-none" cols="30" rows="5" id="textUploadInput" placeholder="Defect Reports"></textarea>
+                <div class="form-check form-switch pt-3">
+                    <!-- <input class="form-check-input" type="checkbox" role="switch" id="switchBtn">
+                    <label class="form-check-label" for="switchBtn" id="switchLabel">File</label> -->
+                  </div>
+                
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" id="clearFile" class="btn btn-primary">Clear</button>
+          <button type="button" id="uploadFile" data-bs-dismiss="modal" class="btn btn-primary">Upload</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- loading spinner -->
+  <div id="backdrop">
+    <div id="spinner"><div></div><div></div><div></div></div>
+  </div>
+
+<!--messsage-->
+
+<button type="button" id="messageOpenBtn" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#message">
+    
+  </button>
+
+<div class="modal fade" id="message" tabindex="-1" aria-labelledby="message" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="messageTitle">Save Defect Reports</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <p id="messageText" class=""></p>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="State.js"></script>
+    <script src="defectReport.js"></script>
+
+</body>
+
+</html>

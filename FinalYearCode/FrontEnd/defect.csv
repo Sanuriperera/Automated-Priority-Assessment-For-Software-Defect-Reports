@@ -1,0 +1,14 @@
+defect
+[wayland] PiP window no longer has a shadow making it lack contrast against background
+Investigate why we're slower on awfy (several sites)
+`mach file-info bugzilla-automation` reports zero information
+Assertion failed: (nominalSkip >= -skipFract) at TDStretch
+[Bug]refresh page after close
+Files and directories won't open directly from Firefox Snap
+Only with tabs in titlebar: Bringing up Firefox window causes transient glitches with GLX and EGL HW WR
+GIT - MozPhab is translating SHA1 (git to hg) too often.
+Crash in [@ gdk_x11_device_manager_xi2_translate_event]
+Theme occasionally switches back immediately after changing
+Wayland with multiple displays: ctrl-tab thumbnails are too small and wrongly positioned
+in xfce firefox doesn't open in the current workspace but in wherever it was started last
+quickly requesting multiple searches (crash signatures for build id, crash reports for signature) can return same url/content for different requests or Bad Request

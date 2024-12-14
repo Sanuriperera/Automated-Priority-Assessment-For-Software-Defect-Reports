@@ -1,0 +1,9 @@
+defect
+[wayland] PiP window no longer has a shadow making it lack contrast against background
+Investigate why we're slower on awfy (several sites)
+`mach file-info bugzilla-automation` reports zero information
+Assertion failed: (nominalSkip >= -skipFract) at TDStretch
+Files and directories won't open directly from Firefox Snap
+Theme occasionally switches back immediately after changing
+Wayland with multiple displays: ctrl-tab thumbnails are too small and wrongly positioned
+in xfce firefox doesn't open in the current workspace but in wherever it was started last
