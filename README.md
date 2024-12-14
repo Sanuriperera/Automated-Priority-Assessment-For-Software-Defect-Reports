@@ -15,3 +15,5 @@ a manual process in most industrial companies. This proposed system divides the 
 defect reports into five levels: P1, P2, P3, P4, and P5. It will be an excellent companion for
 quality engineers, making their lives easier.
 Keywords: Defect Report, Bug, Priority, Deep Learning, Natural Language Processing
+
+![image](https://github.com/user-attachments/assets/290cae5c-f1cb-48cc-baf4-50b2d7b16ac2)
