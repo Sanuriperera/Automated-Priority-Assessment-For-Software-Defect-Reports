@@ -17,3 +17,9 @@ quality engineers, making their lives easier.
 Keywords: Defect Report, Bug, Priority, Deep Learning, Natural Language Processing
 
 ![image](https://github.com/user-attachments/assets/290cae5c-f1cb-48cc-baf4-50b2d7b16ac2)
+
+![image](https://github.com/user-attachments/assets/7a7586e4-37f4-4f35-9da4-99a5d3fc8fd0)
+
+![image](https://github.com/user-attachments/assets/8e7a9709-f980-41f1-bbbc-61f581af5254)
+
+
