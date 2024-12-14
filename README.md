@@ -22,4 +22,14 @@ Keywords: Defect Report, Bug, Priority, Deep Learning, Natural Language Processi
 
 ![image](https://github.com/user-attachments/assets/8e7a9709-f980-41f1-bbbc-61f581af5254)
 
+![image](https://github.com/user-attachments/assets/35bbc92c-76bf-4dcc-977f-1bd70494998a)
+
+![image](https://github.com/user-attachments/assets/e11e307b-e8be-4566-b037-3fb7cb0deb1d)
+![image](https://github.com/user-attachments/assets/acdefea4-d9be-437e-9660-aabb6ea8fa8d)
+![image](https://github.com/user-attachments/assets/aca195f6-eeb8-42e3-b6fd-e99329087f8c)
+
+
+
+
+
 
